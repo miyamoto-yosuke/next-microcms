@@ -32,11 +32,14 @@ jobs:
         run: |
           yarn
 
-      - name: yarn
+      - name: yarn build
         env:
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
         run: |
           yarn build
+
+      - name: next export
+        run: |
           next export
 
       - name: Deploy to netlify
