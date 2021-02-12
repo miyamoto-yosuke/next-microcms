@@ -30,8 +30,8 @@ jobs:
 
       - name: yarn and export
         run: |
-          yarn upgrade --latest
           yarn
+          yarn upgrade --latest
           yarn export
 
       - name: Deploy to netlify
