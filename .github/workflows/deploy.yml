@@ -32,7 +32,7 @@ jobs:
         run: |
           echo ${{secrets.test}}
 
-      - name: yarn and yarn run export
+      - name: yarn and export
         run: |
           yarn
           yarn run export
