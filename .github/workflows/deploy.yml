@@ -28,10 +28,6 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: test
-        run: |
-          echo ${{secrets.test}}
-
       - name: yarn and export
         run: |
           yarn
