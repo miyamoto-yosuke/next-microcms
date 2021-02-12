@@ -28,19 +28,12 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: yarn
+      - name: yarn and yarn run export
         run: |
           yarn
-
-      - name: yarn run build
+          yarn run export
         env:
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
-        run: |
-          yarn run build
-
-      - name: next export
-        run: |
-          next export
 
       - name: Deploy to netlify
         run: npx netlify-cli deploy --dir=./out
