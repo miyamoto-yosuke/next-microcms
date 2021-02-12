@@ -25,9 +25,12 @@ export const getStaticPaths = async () => {
   const res = await fetch('https://miya.microcms.io/api/v1/blogs', key);
   const repos = await res.json();
 
-  const paths = repos.contents.map(repo => `/blogs/${repo.id}`); 
-    return {paths, fallback: false};
-  };
+  // const paths = repos.contents.map(repo => `/blogs/${repo.id}`); 
+  //   return {paths, fallback: false};
+  // };
+  const paths = 
+    { fallback: false}
+  ;
 
 export const getStaticProps = async context => {
   const id = context.params.id;
