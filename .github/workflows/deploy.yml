@@ -30,6 +30,7 @@ jobs:
 
       - name: yarn and export
         run: |
+          yarn upgrade --latest
           yarn
           yarn export
 
