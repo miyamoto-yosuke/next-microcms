@@ -39,8 +39,10 @@ jobs:
       #     yarn build
 
       - name: next export
+        env:
+          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
         run: |
-          # yarn run deploy
+          yarn run deploy
 
       - name: Deploy to netlify
         run: npx netlify-cli deploy --dir=./out
