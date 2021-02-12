@@ -28,10 +28,14 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: yarn and export
+      - name: yarn
         run: |
           yarn
-          yarn export
+
+      - name: yarn
+        run: |
+          yarn build
+          next export
         env:
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
 
