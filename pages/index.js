@@ -28,8 +28,7 @@ const Home = ({blogs}) => {
 
 export const getStaticProps = async () => {
   const key = {
-    // headers: {'X-API-KEY': process.env.MICROCMS_API_KEY},
-    headers: {'X-API-KEY': secrets.MICROCMS_API_KEY},
+    headers: {'X-API-KEY': process.env.MICROCMS_API_KEY},
   };
   const res = await fetch(
     `https://miya.microcms.io/api/v1/blogs/`,
