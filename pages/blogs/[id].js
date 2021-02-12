@@ -6,11 +6,11 @@ const BlogId = ({blog}) => {
     <div>
       <h1>{blog.title}</h1>
       <div>
-        {blog.tags.map(tag => (
+        {/* {blog.tags.map(tag => (
           <React.Fragment key={tag.id}>
             <span>{tag.name}</span>
           </React.Fragment>
-        ))}
+        ))} */}
       </div>
       <div dangerouslySetInnerHTML={{__html: `${blog.body}`}}></div>
     </div>
